@@ -1,0 +1,133 @@
+body{
+    font-family: 'Courier New', Courier, monospace, Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+button{
+    height: 75px;
+    width:75px;
+    border-radius: 10px; 
+    background-color: #b3c3f7;
+}
+
+button:hover{
+    background-color: #757f9e;
+}
+
+button:active{
+    background-color: #5d6680;
+}
+
+#equal:hover{
+    background-color: rgb(206, 143, 26);
+}
+#equal:active
+{
+    background-color: rgb(175, 122, 22);
+}
+
+#clear:hover, #delete:hover
+{
+    background-color: rgb(202, 115, 128);
+}
+
+#clear:active, #delete:active
+{
+    background-color: rgb(161, 92, 106);
+}
+
+h1{
+    color:aliceblue;
+    font-size: 50px;
+}
+
+
+.wholeCalculator{
+    background-color: rgb(12, 73, 143);
+    border-radius: 30px;
+    height: 550px;
+    width: 375px;
+    margin:auto;
+    padding: 15px;
+    display: grid;
+    grid-template-rows: repeat(7,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    grid-template-areas:
+    'res res res res'
+    'res res res res'
+    'clr del mul div'
+    'sev eight nine sub'
+    'four five six add'
+    'one two three equal'
+    'zero zero dec equal';
+}
+
+.resultBox
+{
+    grid-area:res;
+    height: 130px;
+    width: 365px;
+    border-radius: 20px;
+    align-self: end;
+    background-color: rgb(186, 189, 189);
+    margin-bottom: 10px;
+}
+
+.resultNumber
+{
+    grid-area: res;
+    justify-self: end;
+    align-self: end;
+    font-size: 70px;
+    color:rgb(0, 0, 0);
+    padding-right: 15px;
+
+}
+
+.equation
+{
+    grid-area: 1 / 4  / 2 / 4;
+    text-align: right;
+    justify-self: right;
+    padding-right: 15px;
+    font-size: 30px;
+    color: rgb(77, 75, 75);
+}
+
+.operator
+{
+    grid-area: res;
+    align-self:start;
+    justify-self: left;
+    padding-left: 20px;
+    padding-top: 90px;
+    font-size: 40px;
+    color: rgb(77, 75, 75)
+}
+
+#equal
+{
+    grid-area:equal;
+    height: 160px;
+    background-color: rgb(243, 166, 24);
+}
+
+#zero
+{
+    grid-area:zero;
+    width:165px;
+}
+
+#clear
+{
+    background-color: rgb(247, 151, 167);
+}
+
+#delete
+{
+    background-color: rgb(247, 151, 167);
+}
+
